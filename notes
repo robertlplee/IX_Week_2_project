@@ -1,4 +1,22 @@
 List of dishes (menu)
 List of drinks
 
-Total price counter, number 
+Total price counter = number of tickets
+
+
+
+resources:
+
+
+Orders
+dish, drink, name of person ordering
+
+Items -> seed data
+list of dishes
+list of drinks
+with prices
+
+Take track of what has already been ordered -> delete orders 
+Edit orders
+
+After dish is ordered, require the orderer to put in his name so that they can be paid back
