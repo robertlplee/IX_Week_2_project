@@ -8,8 +8,9 @@
 	</tr>
 	<% @orders.each do |order| %>
 		<tr>
-			<td>order.orderer</td>
-			<td>order.order</td>
+			<td><%= order.orderer %></td>
+			<td><%= order.dish %></td>
+			<td><%= order.drink %></td>
 		</tr>
 	<% end %>
 </table>
