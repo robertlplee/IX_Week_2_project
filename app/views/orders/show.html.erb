@@ -1,4 +1,14 @@
+
+<h1> Your Order </h1>
+
+<ul>
+<li><p> Orderer: <%= @order.orderer %> </p></li>
+<li><p> Dish: <%= @order.dish %></p></li>
+<li><p> Drink: <%= @order.drink %></p></li>
+<li><p> Specific Requests: <%= @order.comment %></p></li>
+</ul>
  
-<%= link_to 'Edit', edit_order_path (@order) %> |
-<%= link_to 'Back', order_path %> |
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %> |
 <%= link_to 'Delete', order_path, method: :delete %>
+

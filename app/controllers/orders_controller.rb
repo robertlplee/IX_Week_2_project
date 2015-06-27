@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
 
+	
 	def index
 		@orders = Order.all
 	end
@@ -7,5 +8,28 @@ class OrdersController < ApplicationController
 	def show
 		@order = Order.find(params[:id])
 	end
+	
+	def new
+		@order = Order.new
+	end
 
+	def create
+		@order = Order.new
+
+		if @order.save
+			redirect_to @order
+		else
+			render 'new'
+		end
+	end
+
+	def edit
+		@order = Order.find params[:id]
+	end
+
+	def destroy
+		@order = Order.find params[:id]
+		@order.destroy
+		redirect_to order_path
+	end
 end
