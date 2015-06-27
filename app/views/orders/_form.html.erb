@@ -1,0 +1,21 @@
+<%= form_for @order do |f| %>
+	<div>
+		<%= f.label :orderer %>
+		<%= f.text_field :orderer %>
+	</div>
+
+	<div>
+		<%= f.label :dish %>
+		<%= f.text_field :dish %>
+	</div>
+
+	<div>
+	<%= f.label :drink %>
+	<%= f.text_field :drink %>
+	</div>
+
+	<div>
+	<%= f.submit %>
+	</div>
+
+<% end %>
