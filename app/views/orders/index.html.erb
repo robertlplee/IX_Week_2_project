@@ -14,7 +14,7 @@
 			<td><%= link_to 'Show', order_path(order) %></td>
 			<td><%= link_to 'Edit', edit_order_path(order) %></td>
 			<td><%= link_to 'Destroy', order_path(order),
-				method: :delete, #tells rails to link to execute animals_controller
+				method: :delete,
 				data: { confirm: 'Are you sure?' } %></td>
 		</tr>
 	<% end %>
