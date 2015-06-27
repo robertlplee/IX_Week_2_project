@@ -9,7 +9,7 @@ resources:
 
 
 Orders
-dish, drink, name of person ordering
+dish, drink, name of person ordering, orderee
 
 Items -> seed data
 list of dishes
