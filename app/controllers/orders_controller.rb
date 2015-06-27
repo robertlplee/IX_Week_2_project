@@ -14,7 +14,7 @@ class OrdersController < ApplicationController
 	end
 
 	def create
-		@order = Order.new
+		@order = Order.new(order_params)
 
 		if @order.save
 			redirect_to @order
@@ -31,5 +31,10 @@ class OrdersController < ApplicationController
 		@order = Order.find params[:id]
 		@order.destroy
 		redirect_to order_path
+	end
+
+	private
+	def order_params
+		params.require(:order).permit(:orderer, :drink, :dish, :comment)
 	end
 end
