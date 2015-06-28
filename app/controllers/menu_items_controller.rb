@@ -1,6 +1,12 @@
-class Menu_itemsController < ApplicationController
+class MenuItemsController < ApplicationController
 
 	#to get comments to show up at each article, they should show up under "show"
+
+	def index
+		binding.pry
+		@menu = MenuItem.all
+	end
+
 
 	def create
 		@order = Order.find(params[:place_id])

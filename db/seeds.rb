@@ -5,7 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-menu_items = Menu.create!([
+menu_items = MenuItem.create!([
 	{ item: "Brioche French Toast - with cinnamon sugar and lemon", price:"18"},
 	{ item: "Bircher Muesli - with fruit salad & honey", price: "18" },
 	{ item: "Scrambled Egg - on toast with roast tomato", price: "22"},
