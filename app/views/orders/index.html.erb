@@ -1,21 +1,27 @@
-<h1>All orders</h1>
- <%= link_to 'New order', new_order_path %>
-<table>
-	<tr>
-		<th>Orderer</th>
-		<th>Order</th>
-		<th colspan="5"></th>
-	</tr>
-	<% @orders.each do |order| %>
-		<tr>
-			<td><%= order.orderer %></td>
-			<td><%= order.dish %></td>
-			<td><%= order.drink %></td>
-			<td><%= link_to 'Show', order_path(order) %></td>
-			<td><%= link_to 'Edit', edit_order_path(order) %></td>
-			<td><%= link_to 'Destroy', order_path(order),
-				method: :delete,
-				data: { confirm: 'Are you sure?' } %></td>
-		</tr>
-	<% end %>
-</table>
+<div class="wrapper">
+	<div class="container center">
+		<h1>All orders</h1>
+		<div class="btn new-order">
+		<%= link_to 'New order', new_order_path %>
+		</div>
+		<table class="centerTable">
+			<tr>
+				<th>Orderer</th>
+				<th>Order</th>
+				<th colspan="5"></th>
+			</tr>
+			<% @orders.each do |order| %>
+			<tr>
+				<td><%= order.orderer %></td>
+				<td><%= order.dish %></td>
+				<td><%= order.drink %></td>
+				<td class="btn btn-default"><%= link_to 'Show', order_path(order) %></td>
+				<td class="btn btn-default"><%= link_to 'Edit', edit_order_path(order) %></td>
+				<td class="btn btn-default"><%= link_to 'Delete', order_path(order),
+					method: :delete,
+					data: { confirm: 'Are you sure?' } %></td>
+				</tr>
+				<% end %>
+			</table>
+		</div>
+	</div>

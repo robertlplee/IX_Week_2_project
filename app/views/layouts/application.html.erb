@@ -6,7 +6,11 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="knead-bg">
+
+<div class="nav-header">
+<%= image_tag 'knead.jpg', class: 'knead-logo' %>
+</div>
 
 <%= yield %>
 
