@@ -3,7 +3,6 @@ class MenuItemsController < ApplicationController
 	#to get comments to show up at each article, they should show up under "show"
 
 	def index
-		binding.pry
 		@menu = MenuItem.all
 	end
 

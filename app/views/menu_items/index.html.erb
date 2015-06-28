@@ -1,5 +1,6 @@
 <h1>Full Menu</h1>
- <%= link_to 'New order', new_order_path %>
+ <%= link_to 'New Order', new_order_path %>
+ <%= link_to 'All Orders', orders_path %>
 
 <table>
 	<tr>
@@ -7,7 +8,6 @@
 		<th>Price</th>
 		<th colspan="5"></th>
 	</tr>
-	<% binding.pry%>
 	<% @menu.each do |item| %>
 		<tr>
 			<td><%= item.item %></td>
