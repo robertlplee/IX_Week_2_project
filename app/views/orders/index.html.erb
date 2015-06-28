@@ -11,6 +11,11 @@
 			<td><%= order.orderer %></td>
 			<td><%= order.dish %></td>
 			<td><%= order.drink %></td>
+			<td><%= link_to 'Show', order_path(order) %></td>
+			<td><%= link_to 'Edit', edit_order_path(order) %></td>
+			<td><%= link_to 'Destroy', order_path(order),
+				method: :delete,
+				data: { confirm: 'Are you sure?' } %></td>
 		</tr>
 	<% end %>
 </table>

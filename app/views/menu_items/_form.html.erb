@@ -1,0 +1,16 @@
+<%= form_for @order do |f| %>
+	<div>
+		<%= f.label :dish %>
+		<%= f.collection_select :dish, Order::ORDERS, :to_s, :to_s,
+			:include_blank => true
+		%>
+	</div>
+
+	<div>
+	<%= f.label :drink %>
+			<%= f.collection_select :drink, Order::DRINKS, :to_s, :to_s,
+			:include_blank => true
+		%>
+	</div>
+
+<% end %>

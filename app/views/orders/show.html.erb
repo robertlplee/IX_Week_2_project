@@ -1,12 +1,12 @@
+<h1><%= @order.orderer %>'s Order</h1>
 
-<h1> Your Order </h1>
+	<h2>Menu items chosen</h2>
+		<%= render '@order.menu_items' %>
 
-<ul>
-<li><p> Orderer: <%= @order.orderer %> </p></li>
-<li><p> Dish: <%= @order.dish %></p></li>
-<li><p> Drink: <%= @order.drink %></p></li>
-<li><p> Specific Requests: <%= @order.comment %></p></li>
-</ul>
+	<h2>Specific Requests:</h2>
+		<%= @order.comment %>
+	
+
  
 <%= link_to 'Edit', edit_order_path(@order) %> |
 <%= link_to 'Back', orders_path %> |
