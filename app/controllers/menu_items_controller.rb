@@ -3,13 +3,13 @@ class Menu_itemsController < ApplicationController
 	#to get comments to show up at each article, they should show up under "show"
 
 	def create
-		@order = Order.find(params[:place_id])
+		@order = Order.find(params[:order_id])
 		@menu_item = @order.menu_items.create(menu_item_params)
 		redirect_to order_path(@order)
 	end
 
 	def destroy
-		@order = Order.find(params[:place_id])
+		@order = Order.find(params[:order_id])
 		@menu_item = @order.menu_items.find(params[:id])
 		@menu_item.delete
 		redirect_to order_path(@order)

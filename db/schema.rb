@@ -11,7 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150627205648) do
+ActiveRecord::Schema.define(version: 20150628203749) do
+
+  create_table "MenuItems_Orders", id: false, force: :cascade do |t|
+    t.integer "menu_item_id", null: false
+    t.integer "order_id",     null: false
+  end
 
   create_table "menu_items", force: :cascade do |t|
     t.string   "item"
