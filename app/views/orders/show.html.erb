@@ -1,10 +1,11 @@
 <h1><%= @order.orderer %>'s Order</h1>
 
 	<h2>Menu items chosen</h2>
-		<%= render @order.menu_items %>
+		<%= render '@order.menu_items' %>
 
 	<h2>Specific Requests:</h2>
 		<%= @order.comment %>
+	
 
  
 <%= link_to 'Edit', edit_order_path(@order) %> |

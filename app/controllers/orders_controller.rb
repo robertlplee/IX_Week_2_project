@@ -27,6 +27,7 @@ class OrdersController < ApplicationController
 	end
 
 	def update
+
 		@order = Order.find(params[:id])
 
 		if @order.update(order_params)
@@ -46,4 +47,7 @@ class OrdersController < ApplicationController
 	def order_params
 		params.require(:order).permit(:orderer, :drink, :dish, :comment)
 	end
+
+	# if menu item
+	# 	menu_item.save
 end
