@@ -27,9 +27,22 @@ class OrdersController < ApplicationController
 		@order = Order.find params[:id]
 	end
 
+	def update
+	  @order = Order.find(params[:id])
+	 
+	  if @order.update(order_params)
+	    redirect_to @order
+	  else
+	    render 'edit'
+	  end
+	end
+
 	def destroy
 		@order = Order.find params[:id]
 		@order.destroy
 		redirect_to order_path
 	end
+
+	# if menu item
+	# 	menu_item.save
 end
