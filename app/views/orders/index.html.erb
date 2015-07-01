@@ -8,13 +8,15 @@
 			<tr>
 				<th>Orderer</th>
 				<th>Order</th>
-				<th colspan="5"></th>
+				<th>Comments</th>
+				<th colspan="2", col width = "380"></th>
 			</tr>
 			<% @orders.each do |order| %>
 			<tr>
-				<td><%= order.orderer %></td>
-				<td><%= order.dish %></td>
+				<td><%= order.orderer %>  |</td>
+				<td><%= order.dish %>, </td>
 				<td><%= order.drink %></td>
+				<td><%= order.comment %></td>
 				<td class="btn btn-default"><%= link_to 'Show', order_path(order) %></td>
 				<td class="btn btn-default"><%= link_to 'Edit', edit_order_path(order) %></td>
 				<td class="btn btn-default"><%= link_to 'Delete', order_path(order),

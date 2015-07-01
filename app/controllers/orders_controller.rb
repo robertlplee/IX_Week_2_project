@@ -6,6 +6,8 @@ class OrdersController < ApplicationController
 
 	def show
 		@order = Order.find(params[:id])
+		# @menu_items = @order.menu_items
+
 	end
 
 	def new
